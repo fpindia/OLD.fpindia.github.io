@@ -2,6 +2,26 @@
 
 A static homepage for functionalprogramming.in
 
+## Install
+
+> npm install
+
+ OR
+
+> yarn
+
 ## Development
 
-Just run `yarn` or `npm i` in the repo and run two processes `yarn start` to start the browsersync server and `yarn dev` to compile tailwind css.
+> npm start
+ 
+ OR
+
+> yarn start
+
+## Production
+
+> npm run build
+
+OR
+
+> yarn build
