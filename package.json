@@ -4,7 +4,7 @@
   "description": "Functional programming community in India",
   "repository": "https://github.com/fpindia/homepage",
   "scripts": {
-    "build": "parcel build index.html",
+    "build": "parcel build index.html --public-url ./",
     "start": "parcel index.html"
   },
   "author": "Manas",
