@@ -4,18 +4,15 @@
   "description": "Functional programming community in India",
   "repository": "https://github.com/fpindia/homepage",
   "scripts": {
-    "dev": "gulp",
-    "start": "browser-sync start --server --files css/*.css,*.html"
+    "build": "parcel build index.html",
+    "start": "parcel index.html"
   },
   "author": "Manas",
   "license": "ISC",
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^1.3.0",
     "autoprefixer": "^9.7.4",
-    "browser-sync": "^2.26.7",
-    "gulp": "^4.0.2",
-    "gulp-cli": "^2.2.0",
-    "gulp-postcss": "^8.0.0",
+    "parcel-bundler": "^1.12.4",
     "tailwindcss": "^1.1.4"
   }
 }
