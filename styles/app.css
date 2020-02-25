@@ -2,6 +2,10 @@
 
 @import "./latofonts.css";
 
+body {
+  font-family: "LatoWeb", sans-serif;
+}
+
 h1 {
   @apply text-3xl;
 }
@@ -18,14 +22,6 @@ a {
 li {
   @apply text-lg;
   line-height: 1.75;
-}
-
-@tailwind components;
-
-@tailwind utilities;
-
-body {
-  font-family: "LatoWeb", sans-serif;
 }
 
 .btn {
@@ -48,3 +44,6 @@ body {
   display: block;
   background-color: #666;
 }
+
+@tailwind components;
+@tailwind utilities;

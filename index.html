@@ -7,28 +7,23 @@
     <title>Functional Programming India</title>
     <link rel="icon" type="image/png" href="/assets/favicon.ico" />
   </head>
-  <body class="p-4 h-full">
+  <body class="p-4 h-full mx-auto container">
     <button
       id="nav-button"
-      class="p-2 block sm:hidden border-2 border-solid rounded"
-    >
+      class="p-2 block sm:hidden border-2 border-solid rounded">
       <span class="line"></span>
     </button>
-    <nav
-      id="nav"
-      class="hidden sm:absolute top-0 left-0 sm:block my-4 w-full sm:text-right"
-    >
-      <a class="py-1 sm:px-4 block sm:inline-block" href="#events"
-        >Past and Upcoming events</a
-      >
-      <a class="py-1 sm:px-4 block sm:inline-block" href="#connect">Connect</a>
-      <a class="py-1 sm:px-4 block sm:inline-block" href="#resources"
-        >Resources</a
-      >
+    <nav id="nav" class="sm:block m-10 w-full fixed">
+      <div class="text-right sm:grid-cols-11">
+        <a class="py-1 sm:px-4 block sm:inline-block" href="#about">About</a>
+        <a class="py-1 sm:px-4 block sm:inline-block" href="#upcoming">Upcoming Events</a>
+        <a class="py-1 sm:px-4 block sm:inline-block" href="#past">Past Events</a>
+        <a class="py-1 sm:px-4 block sm:inline-block" href="#connect">Connect With Us</a>
+        <a class="py-1 sm:px-4 block sm:inline-block" href="#resources">Resources</a>
+        <a class="py-1 sm:px-4 block sm:inline-block" href="#jobs">FP Jobs in India</a>
+      </div>
     </nav>
-    <section
-      class="sm:h-full flex items flex-col sm:px-8 m-auto sm:flex-row-reverse"
-    >
+    <section id="about" class="lg:h-full flex items flex-col sm:px-8 m-auto sm:flex-row-reverse">
       <section class="flex items-center justify-center flex-1 text-center">
         <img
           class="w-48 inline-block"
@@ -50,7 +45,7 @@
         </p>
       </section>
     </section>
-    <section id="events" class="sm:h-full flex flex-col">
+    <section id="upcoming" class="sm:h-full flex flex-col">
       <h2 class="w-100 sm:text-center text-3xl sm:text-4xl">Upcoming Events</h2>
       <section
         class="h-full justify-center items-center flex flex-col sm:flex-row-reverse"
@@ -111,7 +106,7 @@
         </section>
       </section>
     </section>
-    <section class="sm:h-full flex flex-col">
+    <section id="past" class="flex flex-col">
       <h2 class="w-100 text-center text-3xl sm:text-4xl">Past Events</h2>
       <section
         class="h-full justify-center items-center flex flex-col sm:flex-row"
