@@ -10,18 +10,16 @@
   <body class="p-4 h-full mx-auto container">
     <button
       id="nav-button"
-      class="p-2 block sm:hidden border-2 border-solid rounded">
+      class="light fixed top-1 left-1 z-50 p-2 block sm:hidden border-2 border-solid rounded">
       <span class="line"></span>
     </button>
-    <nav id="nav" class="sm:block m-10 w-full fixed">
-      <div class="text-right sm:grid-cols-11">
-        <a class="py-1 sm:px-4 block sm:inline-block" href="#about">About</a>
-        <a class="py-1 sm:px-4 block sm:inline-block" href="#upcoming">Upcoming Events</a>
-        <a class="py-1 sm:px-4 block sm:inline-block" href="#past">Past Events</a>
-        <a class="py-1 sm:px-4 block sm:inline-block" href="#connect">Connect With Us</a>
-        <a class="py-1 sm:px-4 block sm:inline-block" href="#resources">Resources</a>
-        <a class="py-1 sm:px-4 block sm:inline-block" href="#jobs">FP Jobs in India</a>
-      </div>
+    <nav id="nav" class="hidden fixed flex flex-col justify-center text-xl sm:flex-row sm:justify-end h-full sm:h-auto top-0 left-0 right-0 bottom-0 sm:bottom-auto bg-gray-700 sm:bg-white w-full p-4 sm:text-right">
+        <a href="#about">About</a>
+        <a href="#upcoming">Upcoming Events</a>
+        <a href="#past">Past Events</a>
+        <a href="#connect">Connect With Us</a>
+        <a href="#resources">Resources</a>
+        <a href="#jobs">FP Jobs in India</a>
     </nav>
     <section id="about" class="lg:h-full flex items flex-col sm:px-8 m-auto sm:flex-row-reverse">
       <section class="flex items-center justify-center flex-1 text-center">
@@ -107,7 +105,7 @@
       </section>
     </section>
     <section id="past" class="flex flex-col">
-      <h2 class="w-100 text-center text-3xl sm:text-4xl">Past Events</h2>
+      <h2 class="w-100 sm:text-center text-3xl sm:text-4xl">Past Events</h2>
       <section
         class="h-full justify-center items-center flex flex-col sm:flex-row"
       >
@@ -205,7 +203,7 @@
         <li>
           <a
             href="https://spectrum.chat/thread/bca413d9-382d-4930-8583-ce317e9750a5"
-          ></a>
+          >A spectrum chat thread on resources for Haskell</a>
         </li>
         <li>
           <a href="http://degoes.net/articles/fp-glossary"
@@ -222,8 +220,16 @@
     <script>
       window.addEventListener("DOMContentLoaded", function() {
         document
-          .querySelector("#nav-button")
+          .querySelector("nav")
           .addEventListener("click", function() {
+            document.querySelector("#nav").classList.toggle("hidden");
+	    navButton.classList.toggle("light");
+          });
+	let navButton = 
+          document
+            .querySelector("#nav-button");
+        navButton.addEventListener("click", function() {
+	    navButton.classList.toggle("light");
             document.querySelector("#nav").classList.toggle("hidden");
           });
       });
