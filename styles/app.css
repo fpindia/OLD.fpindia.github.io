@@ -11,12 +11,26 @@ body {
 h1 {
   @apply text-3xl;
 }
+
 h2 {
   @apply text-xl;
-  @apply mt-12;
+  @apply mt-16;
 }
+
+@screen sm {
+  h2 {
+    @apply mt-24;
+  }
+}
+
 h3 {
   @apply text-lg;
+}
+
+@screen sm {
+  h3 {
+    @apply text-lg mt-12;
+  }
 }
 a {
   @apply text-blue-600;
@@ -43,6 +57,17 @@ nav a {
 @screen sm {
   nav a {
     @apply py-4 px-4 block text-gray-600 font-thin;
+  }
+}
+
+nav {
+  display: none;
+}
+
+@screen sm {
+  nav {
+    display: flex !important;
+    flex-direction: row;
   }
 }
 
