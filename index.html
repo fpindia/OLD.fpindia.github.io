@@ -13,7 +13,7 @@
       class="light fixed top-1 left-1 z-50 p-2 block sm:hidden border-2 border-solid rounded">
       <span class="line"></span>
     </button>
-    <nav id="nav" class="flex fixed hidden flex-col justify-center text-xl h-full top-0 left-0 right-0 bottom-0 bg-gray-700 p-4 sm:bg-white w-full sm:flex-row sm:justify-end sm:h-auto sm:bottom-auto sm:text-right">
+    <nav id="nav" class="fixed hidden sm:flex flex-col justify-center text-xl h-full top-0 left-0 right-0 bottom-0 bg-gray-700 p-4 sm:bg-white w-full sm:flex-row sm:justify-end sm:h-auto sm:bottom-auto sm:text-right">
         <a href="#about">About</a>
         <a href="#upcoming">Upcoming Events</a>
         <a href="#past">Past Events</a>
@@ -223,6 +223,7 @@
           .querySelector("nav")
           .addEventListener("click", function() {
             document.querySelector("#nav").classList.toggle("hidden");
+            document.querySelector("#nav").classList.toggle("flex");
 	    navButton.classList.toggle("light");
           });
 	let navButton = 
@@ -231,6 +232,7 @@
         navButton.addEventListener("click", function() {
 	    navButton.classList.toggle("light");
             document.querySelector("#nav").classList.toggle("hidden");
+            document.querySelector("#nav").classList.toggle("flex");
           });
       });
     </script>

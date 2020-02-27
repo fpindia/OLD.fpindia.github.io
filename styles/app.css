@@ -60,16 +60,16 @@ nav a {
   }
 }
 
-nav {
-  display: none;
-}
+/* nav { */
+/*   display: none; */
+/* } */
 
-@screen sm {
-  nav {
-    display: flex !important;
-    flex-direction: row;
-  }
-}
+/* @screen sm { */
+/*   nav { */
+/*     display: flex !important; */
+/*     flex-direction: row; */
+/*   } */
+/* } */
 
 #nav-button:before,
 .line,
