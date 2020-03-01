@@ -7,28 +7,21 @@
     <title>Functional Programming India</title>
     <link rel="icon" type="image/png" href="/assets/favicon.ico" />
   </head>
-  <body class="p-4 h-full">
+  <body class="p-4 h-full mx-auto container">
     <button
       id="nav-button"
-      class="p-2 block sm:hidden border-2 border-solid rounded"
-    >
+      class="light fixed top-1 left-1 z-50 p-2 block sm:hidden border-2 border-solid rounded">
       <span class="line"></span>
     </button>
-    <nav
-      id="nav"
-      class="hidden sm:absolute top-0 left-0 sm:block my-4 w-full sm:text-right"
-    >
-      <a class="py-1 sm:px-4 block sm:inline-block" href="#events"
-        >Past and Upcoming events</a
-      >
-      <a class="py-1 sm:px-4 block sm:inline-block" href="#connect">Connect</a>
-      <a class="py-1 sm:px-4 block sm:inline-block" href="#resources"
-        >Resources</a
-      >
+    <nav id="nav" class="fixed hidden sm:flex flex-col justify-center text-xl h-full top-0 left-0 right-0 bottom-0 bg-gray-700 p-4 sm:bg-white w-full sm:flex-row sm:justify-end sm:h-auto sm:bottom-auto sm:text-right">
+        <a href="#about">About</a>
+        <a href="#upcoming">Upcoming Events</a>
+        <a href="#past">Past Events</a>
+        <a href="#connect">Connect With Us</a>
+        <a href="#resources">Resources</a>
+        <a href="#jobs">FP Jobs in India</a>
     </nav>
-    <section
-      class="sm:h-full flex items flex-col sm:px-8 m-auto sm:flex-row-reverse"
-    >
+    <section id="about" class="lg:h-full flex items flex-col sm:px-8 m-auto sm:flex-row-reverse">
       <section class="flex items-center justify-center flex-1 text-center">
         <img
           class="w-48 inline-block"
@@ -50,7 +43,7 @@
         </p>
       </section>
     </section>
-    <section id="events" class="sm:h-full flex flex-col">
+    <section id="upcoming" class="sm:h-full flex flex-col">
       <h2 class="w-100 sm:text-center text-3xl sm:text-4xl">Upcoming Events</h2>
       <section
         class="h-full justify-center items-center flex flex-col sm:flex-row-reverse"
@@ -111,8 +104,8 @@
         </section>
       </section>
     </section>
-    <section class="sm:h-full flex flex-col">
-      <h2 class="w-100 text-center text-3xl sm:text-4xl">Past Events</h2>
+    <section id="past" class="flex flex-col">
+      <h2 class="w-100 sm:text-center text-3xl sm:text-4xl">Past Events</h2>
       <section
         class="h-full justify-center items-center flex flex-col sm:flex-row"
       >
@@ -210,7 +203,7 @@
         <li>
           <a
             href="https://spectrum.chat/thread/bca413d9-382d-4930-8583-ce317e9750a5"
-          ></a>
+          >A spectrum chat thread on resources for Haskell</a>
         </li>
         <li>
           <a href="http://degoes.net/articles/fp-glossary"
@@ -227,9 +220,19 @@
     <script>
       window.addEventListener("DOMContentLoaded", function() {
         document
-          .querySelector("#nav-button")
+          .querySelector("nav")
           .addEventListener("click", function() {
             document.querySelector("#nav").classList.toggle("hidden");
+            document.querySelector("#nav").classList.toggle("flex");
+	    navButton.classList.toggle("light");
+          });
+	let navButton = 
+          document
+            .querySelector("#nav-button");
+        navButton.addEventListener("click", function() {
+	    navButton.classList.toggle("light");
+            document.querySelector("#nav").classList.toggle("hidden");
+            document.querySelector("#nav").classList.toggle("flex");
           });
       });
     </script>

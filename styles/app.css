@@ -1,16 +1,36 @@
 @tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @import "./latofonts.css";
+
+body {
+  font-family: "Lato", sans-serif;
+}
 
 h1 {
   @apply text-3xl;
 }
+
 h2 {
   @apply text-xl;
-  @apply mt-8;
+  @apply mt-16;
 }
+
+@screen sm {
+  h2 {
+    @apply mt-24;
+  }
+}
+
 h3 {
   @apply text-lg;
+}
+
+@screen sm {
+  h3 {
+    @apply text-lg mt-12;
+  }
 }
 a {
   @apply text-blue-600;
@@ -18,14 +38,6 @@ a {
 li {
   @apply text-lg;
   line-height: 1.75;
-}
-
-@tailwind components;
-
-@tailwind utilities;
-
-body {
-  font-family: "LatoWeb", sans-serif;
 }
 
 .btn {
@@ -38,6 +50,27 @@ body {
   @apply bg-blue-700;
 }
 
+nav a {
+  @apply py-2 px-4 block text-white;
+}
+
+@screen sm {
+  nav a {
+    @apply py-4 px-4 block text-gray-600 font-thin;
+  }
+}
+
+/* nav { */
+/*   display: none; */
+/* } */
+
+/* @screen sm { */
+/*   nav { */
+/*     display: flex !important; */
+/*     flex-direction: row; */
+/*   } */
+/* } */
+
 #nav-button:before,
 .line,
 #nav-button:after {
@@ -46,5 +79,11 @@ body {
   height: 2px;
   width: 16px;
   display: block;
+  background-color: white;
+}
+
+#nav-button.light:before,
+.light .line,
+#nav-button.light:after {
   background-color: #666;
 }
