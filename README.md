@@ -1,6 +1,6 @@
 # Homepage
 
-A static homepage for the [FPIndia Homepage](functionalprogramming.in)
+A static homepage for [FPIndia](functionalprogramming.in)
 
 ## Install
 
